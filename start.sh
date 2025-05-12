@@ -23,4 +23,4 @@ sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resourc
 #install cloudflared
 brew install cloudflared
 #configure cloudflared and start it
-cloudflared access rdp --hostname mac.rdp.tw --url rdp://127.0.0.1
+cloudflared access rdp --hostname mac.rdp.tw --url rdp://localhost:3389
