@@ -21,6 +21,10 @@ echo runnerrdp | perl -we 'BEGIN { @k = unpack "C*", pack "H*", "1734516E8BA8C5E
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -restart -agent -console
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate
 #install cloudflared
-brew install cloudflared
+#brew install cloudflared
 #configure cloudflared and start it
-cloudflared access rdp --hostname mac.rdp.tw --url rdp://localhost:3389
+#install ngrok
+brew install --cask ngrok
+#configure ngrok and start it
+ngrok authtoken $1
+ngrok tcp 5900 --region=in &
