@@ -20,9 +20,7 @@ echo runnerrdp | perl -we 'BEGIN { @k = unpack "C*", pack "H*", "1734516E8BA8C5E
 #Start VNC/reset changes
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -restart -agent -console
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate
-#install ngrok
+#install cloudflared
 brew install cloudflared
-#configure ngrok and start it
-# cloudflared service install eyJhIjoiOGJhNDU1MmJiNGIzMzM4ZGQ2MGM4NzJlMzg1ZDZiOTQiLCJ0IjoiM2M2NzgxZGUtYWUwMC00NTZiLWFlODktNDAwMmU5ZDhjNDdmIiwicyI6Ik1EYzBaR1ZoTURRdE4yRmxOUzAwTkRFekxUZzVOVGt0WXpFd05EWmhZekUyTmpSaSJ9
-brew install cloudflared && 
+#configure cloudflared and start it
 sudo cloudflared service install eyJhIjoiOGJhNDU1MmJiNGIzMzM4ZGQ2MGM4NzJlMzg1ZDZiOTQiLCJ0IjoiM2M2NzgxZGUtYWUwMC00NTZiLWFlODktNDAwMmU5ZDhjNDdmIiwicyI6Ik1EYzBaR1ZoTURRdE4yRmxOUzAwTkRFekxUZzVOVGt0WXpFd05EWmhZekUyTmpSaSJ9
